@@ -1,0 +1,106 @@
+<div class="header-container">
+  <div class="header-track-link">
+    <a [routerLink]="['/track-order']" target="blank">
+      Track Your Order
+    </a>
+  </div>
+  <div class="header-alert-banner">
+    <a [routerLink]="['/collection/charcoal-skincare']">
+      #GroomingWithPride | Get 25% off using Code: PRIDE.
+    </a>
+  </div>
+  <div class="header-content">
+    <div class="header-logo">
+      <a [routerLink]="['/']">
+        <img src="assets/images/logo.png" alt="Bombay Shaving Company">
+      </a>
+    </div>
+    <div class="header-nav">
+      <nav class="navbar-wrapper" role="menubar">
+        <ul class="navbar-menu">
+          <li class="navbar-menu-item">
+            <a class="navbar-menu-item-a">
+              PRODUCTS <i class="fa fa-chevron-down" aria-hidden="true"></i>
+            </a>
+            <ul class="navbar-menu-item-options-list">
+              <li class="navbar-menu-item-option">
+                <a [routerLink]="['/products']">SHAVE</a>
+              </li>
+              <li class="navbar-menu-item-option">
+                <a [routerLink]="['/collection/mens-beardcare-products']">BEARD</a>
+              </li>
+              <li class="navbar-menu-item-option">
+                <a [routerLink]="['/collection/mens-soap-for-dry-oily-skin']">BATH</a>
+              </li>
+              <li class="navbar-menu-item-option">
+                <a [routerLink]="['/collection/mens-skincare-products']">SKIN</a>
+              </li>
+              <li class="navbar-menu-item-option">
+                <a [routerLink]="['/collection/mens-gifting-products']">GIFT</a>
+              </li>
+            </ul>
+          </li>
+          <li class="navbar-menu-item">
+            <a class="navbar-menu-item-a" [routerLink]="['/corporate-gifts']">
+              CORPORATE GIFTS
+            </a>
+          </li>
+          <li class="navbar-menu-item">
+            <a href="https://aftershave.bombayshavingcompany.com/" class="navbar-menu-item-a">BLOG</a>
+          </li>
+          <li class="navbar-menu-item">
+            <a class="navbar-menu-item-a">
+              KNOW MORE <i class="fa fa-chevron-down" aria-hidden="true"></i>
+            </a>
+            <ul class="navbar-menu-item-options-list">
+              <li class="navbar-menu-item-option">
+                <a [routerLink]="['/know-more']">ABOUT US</a>
+              </li>
+              <li class="navbar-menu-item-option">
+                <a [routerLink]="['/shave-care']">Shave Care</a>
+              </li>
+              <li class="navbar-menu-item-option">
+                <a [routerLink]="['/beard-care']">Beard Care</a>
+              </li>
+              <li class="navbar-menu-item-option">
+                <a [routerLink]="['/bath-care']">Bath Care</a>
+              </li>
+              <li class="navbar-menu-item-option">
+                <a [routerLink]="['/face-care']">Charcoal Facial Care</a>
+              </li>
+              <li class="navbar-menu-item-option">
+                <a [routerLink]="['/skin-care']">Skin Care</a>
+              </li>
+            </ul>
+          </li>
+          <li class="navbar-menu-item" *ngIf="!userSignedIn">
+            <a [routerLink]="['/user/sign-in']" class="navbar-menu-item-a">
+              SIGN IN
+            </a>
+          </li>
+          <li class="navbar-menu-item" *ngIf="userSignedIn">
+            <a class="navbar-menu-item-a">
+              USER <i class="fa fa-chevron-down" aria-hidden="true"></i>
+            </a>
+            <ul class="navbar-menu-item-options-list">
+              <li class="navbar-menu-item-option">
+                <a [routerLink]="['/my-account/history']">MY ACCOUNT</a>
+              </li>
+              <li class="navbar-menu-item-option">
+                <a [routerLink]="['/settings/user_profile']">Settings</a>
+              </li>
+              <li class="navbar-menu-item-option">
+                <a (click) = "logout()">Log out</a>
+              </li>
+            </ul>
+          </li>
+          <li class="navbar-menu-item">
+            <a class="navbar-menu-item-a" [routerLink]="['/buy/cart']">
+              <img src="assets/images/icons/cart.png" alt="CART">
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>

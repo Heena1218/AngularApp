@@ -1,0 +1,44 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
+body {
+  @include font-family("Merriweather Sans", normal);
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: initial;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+div {
+  line-height: 0;
+}

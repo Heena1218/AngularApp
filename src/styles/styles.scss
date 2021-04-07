@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+/* Global Style */
+@import './global/color.scss';
+@import './global/font-awesome';
+@import './global/mixins.scss';
+@import './global/fonts.scss';
+
+
+/* Layout Style */
+@import './layout/body';
+@import './layout/common';
+@import './layout/header';
+@import './layout/footer';
+@import './layout/form';

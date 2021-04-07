@@ -1,0 +1,123 @@
+// quickly add font-face
+@mixin font-face($font-name, $path, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: quote($font-name);
+    src: url($path + ".ttf") format("truetype"),
+      url($path + ".woff") format("woff");
+    font-weight: $weight;
+    font-style: $style;
+    text-rendering: optimizeLegibility;
+  }
+}
+
+// sets font-size, line-height and letter-spacing
+@mixin font-size($font-size, $line-height: normal, $letter-spacing: normal) {
+  font-size: $font-size * 1px;
+
+  @if $line-height==normal {
+    line-height: normal;
+  } @else {
+    line-height: $line-height / $font-size;
+  }
+
+  @if $letter-spacing==normal {
+    letter-spacing: normal;
+  } @else {
+    letter-spacing: #{$letter-spacing / $font-size}em;
+  }
+}
+
+// sets Font-Family, Font-Weight
+@mixin font-family($font-family, $font-weight: normal) {
+  font-family: $font-family;
+
+  @if $font-weight==normal {
+    font-weight: normal;
+  } @else {
+    font-weight: $font-weight
+  }
+}
+
+// flex-box
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+}
+
+// Cards Box Shadow
+@mixin card-box-shadow {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+// ----------------------------------
+// Media Query
+// ----------------------------------
+
+$mobile-width: 320px;
+$tablet-width: 768px;
+$tablet-p-width: 991px;
+$desktop-width: 1024px;
+$header-width: 1160px;
+$desktop-width-lg: 1500px;
+
+// Mobile
+@mixin mobile {
+  @media (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+
+// Tablet
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+// Tablet + Mobile
+@mixin mobile-tablet {
+  @media (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+// Mobile-Tablet (P)
+@mixin mobile-tablet-p {
+  @media (max-width: #{$tablet-p-width}) {
+    @content;
+  }
+}
+
+// Tablet (P)
+@mixin tablet-p {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$tablet-p-width}) {
+    @content;
+  }
+}
+// Tablet + Desktop
+@mixin tablet-desktop {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+// Desktop (SM)
+@mixin desktop-xs {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$header-width}) {
+    @content;
+  }
+}
+
+// Desktop
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+// Large Desktops
+@mixin desktop-lg {
+  @media (min-width: #{$desktop-width-lg}) {
+    @content;
+  }
+}

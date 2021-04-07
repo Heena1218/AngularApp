@@ -1,0 +1,124 @@
+.footer-container {
+  background: $footer-color;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  z-index: 5;
+  max-width: $desktop-width-lg;
+  margin: 0 auto;
+  .footer-content {
+    @include font-family(Lato, normal);
+    @include flex-center;
+    justify-content: space-between;
+    max-width: $header-width;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 0;
+    @include desktop-xs {
+      padding: 20px 11px;
+    }
+    @include mobile-tablet {
+      display: block;
+      text-align: center;
+      padding: 25px 0px;
+    }
+    @include mobile {
+      padding: 25px 0px 100px;
+    }
+    .footer-text-style {
+      color: $nav-color;
+      @include font-size(13, 16, 1);
+      @include desktop-xs {
+        @include font-size(12, 16, 1);
+      }
+      @include mobile-tablet {
+        @include font-size(12, 16, 1);
+      }
+    }
+    .footer-logo {
+      @include tablet {
+        width: 340px;
+      }
+      img {
+        width: 97px;
+        margin-left: 13px;
+        @include desktop-xs {
+          margin-left: 0px;
+        }
+        @include mobile-tablet {
+          margin-left: 0px;
+        }
+      }
+    }
+    .footer-section-1 {
+      @include tablet {
+        width: 260px;
+      }
+      @include mobile {
+        margin-top: 20px;
+      }
+      .footer-links {
+        padding-left: 15px;
+        list-style: disc;
+        @include mobile {
+          padding-left: 0px;
+        }
+        li {
+          list-style-type: disc;
+          color: $nav-color;
+          @include font-size(13, 16, 1);
+          @include mobile {
+            list-style-type: none;
+            @include font-size(13, 21, 1);
+          }
+        }
+      }
+    }
+    .footer-section-2 {
+      @include mobile {
+        margin-top: 20px;
+      }
+      @include tablet {
+        width: 340px;
+        margin-top: 20px;
+      }
+      .social-icons-footer {
+        li {
+          .footer-text-style {
+            color: $nav-color;
+            padding-right: 16px;
+          }
+          display: inline-block;
+        }
+      }
+      .static-links-footer {
+        padding-top: 12px;
+        li {
+          @include font-size(13, 16, 1);
+          display: inline-block;
+          .footer-text-style {
+            padding-right: 3px;
+          }
+          span {
+            color: $nav-color;
+            @include font-size(13, 16, 1);
+            display: inline-block;
+            padding-right: 3px;
+          }
+        }
+      }
+    }
+    .footer-section-3 {
+      @include mobile {
+        margin-top: 20px;
+      }
+      @include tablet {
+        width: 260px;
+        margin-top: 20px;
+      }
+      img {
+        margin-bottom: 13px;
+        width: 252px;
+      }
+    }
+  }
+}

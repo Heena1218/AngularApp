@@ -1,0 +1,169 @@
+.login-page-container {
+  width: 440px;
+  @include mobile {
+    width: 90%;
+    max-width: 440px;
+  }
+  margin: 0 auto 80px auto;
+}
+.login-page-heading {
+  padding: 55px 0 40px;
+  text-align: center;
+  h1 {
+    color: $nav-color;
+    @include font-family("Merriweather Sans", bold);
+    @include font-size(18, 20, 3);
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+  }
+}
+.form-container {
+  width: 440px;
+  @include mobile {
+    max-width: 100%;
+  }
+  border: 1px solid $grey-color;
+  padding: 66px 0 20px;
+  margin-bottom: 20px;
+  .form-content {
+    display: block;
+    .form-group {
+      padding: 0 78px;
+      @include mobile {
+        padding: 0 10%;
+      }
+      text-align: left;
+      margin: 0 auto 15px auto;
+      img {
+        vertical-align: bottom;
+      }
+      .form-label {
+        @include font-family("Merriweather Sans", normal);
+        @include font-size(15, 19, 1);
+        color: $nav-color;
+        margin-left: 0;
+        display: inline-block;
+        max-width: 100%;
+        margin-bottom: 5px;
+        .informative-text {
+          @include font-family(Lato, normal);
+          @include font-size(10, 17, 1);
+          color: $nav-color;
+          margin-top: 0;
+        }
+      }
+      .form-input {
+        color: $nav-color;
+        margin: 0;
+        background: $input-bg-color;
+        @include font-family("Merriweather Sans", normal);
+        @include font-size(16, 20, 1);
+        height: 40px;
+        border: 0;
+        padding: 0 0 0 15px;
+        width: 100%;
+        &:focus {
+          border: 1px solid $grey-color;
+        }
+      }
+      .informative-text {
+        @include font-family(Lato, normal);
+        @include font-size(10, 17, 1);
+        color: $nav-color;
+        margin-top: 10px;
+      }
+    }
+    .form-btn {
+      margin: 38px 0 20px;
+      text-align: center;
+      .submit-btn {
+        cursor: pointer;
+        width: 218px;
+        background: $bsc-primary-color;
+        @include font-family(Lato, normal);
+        @include font-size(14, 40, 2);
+        color: $white-color;
+        text-align: center;
+        text-transform: uppercase;
+        display: inline-block;
+        border-radius: 4px;
+        border: 0;
+      }
+    }
+  }
+}
+
+.control-messages {
+  @include font-family(Lato, normal);
+  @include font-size(10, 17, 1);
+  color: $error-color;
+  display: block;
+  margin: 0;
+}
+
+.error-box {
+  border: 1px solid $error-color !important;
+}
+
+.divider {
+  width: 90%;
+  border-top: 1px solid $grey-color;
+  margin: 40px auto;
+  position: relative;
+  .or {
+    position: absolute;
+    bottom: -14px;
+    background: $white-color;
+    border-radius: 50%;
+    left: calc(50% - 25px);
+    width: 50px;
+    height: 25px;
+    text-align: center;
+    color: $bsc-primary-color;
+    @include font-family(Lato, bold);
+    @include font-size(15, 19, 1);
+  }
+}
+
+.social-login-list {
+  @include font-family("Merriweather Sans", normal);
+  @include font-size(14, 18, 2);
+  color: $nav-color;
+  text-transform: uppercase;
+  margin: 30px 0 25px;
+  text-align: center;
+  .facebook-login {
+    color: $fb-color;
+  }
+  .google-login {
+    color: $google-color;
+  }
+}
+
+.forgot-password-link {
+  margin: 25px 0;
+  text-align: center;
+  a {
+    @include font-family("Merriweather Sans", normal);
+    @include font-size(14, 18, 1);
+    color: $nav-color;
+    text-transform: uppercase;
+    padding: 15px 0;
+  }
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  opacity: 0.3; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  opacity: 0.3;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  opacity: 0.3;
+}

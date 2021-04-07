@@ -3,9 +3,17 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  appUrl: '',
+  server: {
+      apiVersionPath: ``,
+      apiBaseUrl: `http://localhost:3000`,
+      imageHostingBaseUrl: ``,
+      apiSecret: ``,
+      apiSecretKeyName: `X-Authorization`,
+      apiTokenKeyName: 'Authorization'
+  }
 };
-
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.

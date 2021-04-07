@@ -1,0 +1,14 @@
+{
+  "users": [
+    {
+      "email": "heena@gmail.com",
+      "password": "$2a$10$yP8zLWKQqsp8YkraIY1EO..CvTXiOhS3JXHRA2PInJ83vaMG72L5C",
+      "id": 1
+    },
+    {
+      "email": "sharma@gmail.com",
+      "password": "$2a$10$tHbG7B3NxrZmMlh7oZGXlerJFR4ACCt8N.UTDPa1RaFv9RHOxfol2",
+      "id": 2
+    }
+  ]
+}
